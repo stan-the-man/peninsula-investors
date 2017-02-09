@@ -1,6 +1,14 @@
 # peninsula-investors
 website for the old folks
 
+Shit you will probably need for this:
+- expressjs (and get the commandline tool and install with jade for html)
+- boostrap3
+- npm
+- yarn (like npm but keeps everything in a lockfile so our versions wont change on us without us knowing)
+- mongodb
+
+
 Highest priority right now is getting together the routing and CSS/HTML docs so that we can
 put up baseline pages. I have the routes picked out in the app page, and am working on the frontend styling.
 
