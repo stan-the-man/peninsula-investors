@@ -1,0 +1,13 @@
+{
+  "name": "express_tutorials",
+  "version": "1",
+  "description": "my attempts to understand node",
+  "main": "index.js",
+  "author": "Stan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-generator": "^4.14.0",
+    "yo": "^1.8.5"
+  }
+}
