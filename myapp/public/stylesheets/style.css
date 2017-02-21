@@ -3,6 +3,28 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1 {
+    font-size: 36px;
+}
+
 a {
   color: #00B7FF;
+}
+
+.title-header-bar {
+    margin-left: 0;
+    text-align: left;
+    width: 75%;
+}
+
+.logo {
+    float:left;
+    width: 15%;
+}
+
+.page-title {
+    padding-top: 5%;
+    padding-left: 17%;
+    margin-left: 10;
+    text-align: left;
 }

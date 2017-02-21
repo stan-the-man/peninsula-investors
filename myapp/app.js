@@ -3,7 +3,6 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-var boostrap = require('boostrap');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
@@ -15,28 +14,28 @@ var app = express();
 // all the pages routes by get -- will add posts and other such if we need it later
 app.get('/', function(req, res) { res.render('index', {title : 'Main Page'})})
 // methods need to support: GET
-app.get('/main', function(req, res) { res.send('should be the main page')})
+app.get('/main', function(req, res) { res.render('index', {title : 'Main Page'})})
 // methods need to support: GET
-app.get('/agreement', function(req, res) { res.send('should be the agreement page')})
+app.get('/agreement', function(req, res) { res.render('agreement', {title: 'Agreement'})})
 // methods need to support: GET POST
 app.route('/chat') 
-    .get(function(req, res) { res.send('should be the chat get page')})
+    .get(function(req, res) { res.render('chat', {title: 'Chat'})})
     .post(function(req, res) { res.send('should be the chat post page')})
 // methods need to support: GET POST
 app.route('/roster') 
-    .get(function(req, res) { res.send('should be the roster get page')})
+    .get(function(req, res) { res.render('roster', {title: 'Roster'})})
     .post(function(req, res) { res.send('should be the roster post page')})
 // methods need to support: GET POST
 app.route('/tips') 
-    .get(function(req, res) { res.send('should be the tips get page')})
+    .get(function(req, res) { res.render('tips', {title: 'Tips'})})
     .post(function(req, res) { res.send('should be the tips post page')})
 // methods need to support: GET POST
 app.route('/login') 
-    .get(function(req, res) { res.send('should be the login get page')})
+    .get(function(req, res) { res.render('login', {title: 'Login'})})
     .post(function(req, res) { res.send('should be the login post page')})
 // methods need to support: GET POST
 app.route('/calendar') 
-    .get(function(req, res) { res.send('should be the calendar get page')})
+    .get(function(req, res) { res.render('calendar', {title: 'Calendar'})})
     .post(function(req, res) { res.send('should be the calendar post page')})
 
 // start the app listening on port 3000
@@ -65,6 +64,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
+// using bower for boostrap
+app.use(express.static(path.join(__dirname, '/bower_components')));
 
 app.use('/', index);
 app.use('/users', users);
