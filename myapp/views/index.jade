@@ -2,31 +2,20 @@ extends layout
 
 block header-content
     div.header
-        h1 Peninsula Investors
+        img(src="./images/pure_logo.png").logo
+        h1.page-title Peninsula Investors
+        hr.title-header-bar
 
 block menu
-  div.top
-    form.form-horizontal(method="post", id="loginForm")
-      label Username
-      input.span3(id="username", type="text", name="User", placeholder="Enter your username")
-      label Password
-      input.span3(id="password", type="password", name="Password")
-      input.btn(type="submit", value="Log In")
   div.container
     div.content
       table.table.table-striped
-        thead
-          tr
-            th Peninsula 
-            th Investors 
         tbody 
-          ul Navigation
+          ul 
             li: a(href="/roster") Roster 
             li: a(href="/chat") Chat 
             li: a(href="/agreement") Agreement 
             li: a(href="/roster") Roster
             li: a(href="/tips") Tips
             li: a(href="/calendar") Calendar
-    
- 
   div.footer

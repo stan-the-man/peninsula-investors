@@ -5,3 +5,8 @@ mixin title_header(nav_link, page_name)
             h1.page-title=page_name
             a(href=nav_link) <-- return to main page
             hr.title-header-bar
+
+mixin login_header()
+    .login_header
+        .login_header-wrapper
+            img(src="./images/pure_logo.png").login-logo

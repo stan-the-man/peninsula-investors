@@ -21,10 +21,21 @@ a {
     float:left;
     width: 15%;
 }
+.login-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    padding-bottom: 5%;
+}
 
 .page-title {
     padding-top: 5%;
     padding-left: 17%;
     margin-left: 10;
     text-align: left;
+}
+
+.vertical-align {
+    text-align: center;
 }

@@ -2,8 +2,10 @@ extends layout
 include mixins
 
 block header-content
-    +title_header('/', 'Roster')
+    +title_header('/main', 'Roster')
 
 block content
-    p roster goes here.
-
+    ul
+        each member, i in memberlist
+            li#member_list_item
+                #{member.name} #{member.address} #{member.phone} #{member.spouse} #{member.email} #{member.birthday} #{member.password}

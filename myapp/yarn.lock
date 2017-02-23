@@ -329,6 +329,12 @@ jstransformer@0.0.2:
     is-promise "^2.0.0"
     promise "^6.0.1"
 
+kerberos@~0.0.17:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/kerberos/-/kerberos-0.0.22.tgz#d084b7f909c2393c464917557aa5a85e834fdfce"
+  dependencies:
+    nan "~2.4"
+
 lru-cache@2:
   version "2.7.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
@@ -419,6 +425,10 @@ ms@0.7.1:
 ms@0.7.2:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.2.tgz#ae25cf2512b3885a1d95d7f037868d8431124765"
+
+nan@~2.4:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.4.0.tgz#fb3c59d45fe4effe215f0b890f8adf6eb32d2232"
 
 negotiator@0.6.1:
   version "0.6.1"

@@ -2,8 +2,15 @@ extends layout
 include mixins
 
 block header-content
-    +title_header('/')
+    +login_header
 
 block content
-    p agreement goes here.
-
+  div.top.vertical-align
+    form.form-vertical(method="post", id="loginForm")
+      input.span3(id="username", type="text", name="User", placeholder="Enter your username")
+      p
+        input.span3(id="password", type="password", name="Password", placeholder="Password")
+      input.btn(type="submit", value="Log In")
+    br
+    br
+    a(href='/new-user') create a new user

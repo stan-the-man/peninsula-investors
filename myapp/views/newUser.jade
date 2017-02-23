@@ -1,0 +1,45 @@
+extends layout
+include mixins
+
+block header-content
+    +login_header
+
+block content
+  div.top.vertical-align
+    form.form-vertical(name='new-user', method="post", action='/new-user')
+        span Username: 
+        span &nbsp;
+        input.span3(id="username", type="text", name="User", placeholder="Enter your username")
+        br
+        br
+        span Password: 
+        span &nbsp;
+        input.span3(id="password", type="password", name="Password", placeholder="Password")
+        br
+        br
+        span Address: 
+        span &nbsp;
+        input.span3(id="address", type="text", name="Address")
+        br
+        br
+        span Phone: 
+        span &nbsp;
+        input.span3(id="phone", type="text", name="Phone")
+        br
+        br
+        span Spouse: 
+        span &nbsp;
+        input.span3(id="spouse", type="text", name="Spouse")
+        br
+        br
+        span Email: 
+        span &nbsp;
+        input.span3(id="email", type="text", name="Email")
+        br
+        br
+        span Birthday: 
+        span &nbsp;
+        input.span3(id="birthday", type="text", name="Birthday")
+        br
+        br
+        input.btn(type="submit", value="Create New User")
