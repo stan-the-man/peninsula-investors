@@ -1,12 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var mongo = require('mongodb');
+var MeetingMinutes = require('../models/meeting_minutes')
+var Agreement = require('../models/agreement')
 
 // all the pages routes by get -- will add posts and other such if we need it later
 router.get('/', function(req, res) { res.redirect('/login') })
  
 // methods need to support: GET
-router.get('/main', function(req, res) { res.render('index', {title : 'Main Page'})})
+router.get('/main', function(req, res) {  
+    res.render('index', {title : 'Main Page'});
+})
 
 // methods need to support: GET
 router.get('/agreement', function(req, res) { res.render('agreement', {title: 'Agreement'})})
@@ -32,7 +36,6 @@ router.route('/roster')
                     if(err){
                         res.send(err);
                     } else if (result.length) {
-                        console.log(result);
                         res.render('roster', {title: 'Roster', memberlist: result})
                     } else {
                         res.send("No DB info Found");
@@ -88,8 +91,4 @@ router.route('/new-user')
             }});
     })
     
-// methods need to support: GET POST
-router.route('/calendar') 
-    .get(function(req, res) { res.render('calendar', {title: 'Calendar'})})
-    .post(function(req, res) { res.send('should be the calendar post page')})
 module.exports = router;

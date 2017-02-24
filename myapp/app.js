@@ -5,12 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb');
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var config = require('./config')();
 
 var app = express();
+mongoose.connect('mongodb://localhost/peinv')
 
 // start the app listening on port 3000
 app.listen(config.port, function() { console.log("listening on port " + config.port)})
