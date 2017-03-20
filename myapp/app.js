@@ -15,7 +15,15 @@ var app = express();
 mongoose.connect('mongodb://localhost/peinv')
 
 // start the app listening on port 3000
-app.listen(config.port, function() { console.log("listening on port " + config.port)})
+var io = require('socket.io').app.listen(config.port, function() { console.log("listening on port " + config.port)})
+
+// set up messaging socket
+io.sockets.on('connection', function (socket) {
+    socket.emit('message', {message: 'welcome to the Pennisula Investors Chat Room'});
+    socket.on('send', function (data) {
+        io.sockets.emit('message', data);
+    })
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
